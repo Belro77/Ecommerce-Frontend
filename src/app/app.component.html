@@ -1,12 +1,50 @@
 <header class="brand-header">
-  <h1 class="brand-title">Tienda de Ropa</h1>
+
+  <!-- Título -->
+  <div class="brand">
+    <h1 class="brand-title">Tienda de Ropa</h1>
+  </div>
+
+  <!-- Navegación central -->
+  <nav class="nav-links">
+    <a routerLink="/home">Inicio</a>
+    <a routerLink="/productlist">Productos</a>
+    <a routerLink="/login">Iniciar sesión</a>
+  </nav>
+
+  <!-- Carrito -->
+  <a class="cart" routerLink="/cart">
+    🛒 Carrito
+  </a>
+
 </header>
 
-<nav>
-  <a routerLink="/home" routerLinkActive="active">Inicio</a>
-  <a routerLink="/productlist" routerLinkActive="active">Prendas</a>
-  <a routerLink="/cart" routerLinkActive="active">Carrito</a>
-</nav>
+
+ 
+
+<!-- Banner principal -->
+<section class="hero">
+ <form class="search-box" (ngSubmit)="buscar()">
+
+    <input
+      type="text"
+      [(ngModel)]="textoBusqueda"
+      name="buscar"
+      placeholder="¿Qué estás buscando?"
+    >
+
+    <button type="submit">
+      🔍
+    </button>
+
+  </form>
+
+</section>
+
+
+
+
+
 
 <router-outlet></router-outlet>
 
