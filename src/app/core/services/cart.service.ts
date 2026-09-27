@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CartService {
 
-  private apiUrl = 'http://localhost:4000/cart';
+  private apiUrl = 'https://eccomerce-backend-0750.onrender.com/cart';
 
   private userId = 'usuario-prueba';
 
