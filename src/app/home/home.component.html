@@ -1,0 +1,23 @@
+
+<section class="hero">
+
+  <form class="search-box" (ngSubmit)="buscar()">
+
+    <input 
+      class="input"
+      type="text"
+      [(ngModel)]="textoBusqueda"
+      name="buscar"
+      placeholder="¿Qué estás buscando?"
+    >
+
+    <button type="submit" class="lupita">
+      🔍
+    </button>
+
+  </form>
+
+</section>
+
+<app-product-carousel></app-product-carousel>
+

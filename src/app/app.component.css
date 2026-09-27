@@ -1,11 +1,10 @@
 .brand-header {
+  margin-top: 1%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 
@@ -13,27 +12,33 @@
 .brand {
   flex: 1;
 }
-
-.brand-title {
-  margin: 0;
-  font-size: 1.5rem;
-  font-family: 'Playfair Display', serif;
-  color: #d32f2f;
-  text-transform: uppercase;
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 70px;
+     margin-left: 3px;
+     
 }
+.category-menu{
+  margin-top: -2%;
 
+
+}
 /* Navegación */
 .nav-links {
   display: flex;
   justify-content: center;
   gap: 25px;
   flex: 1;
+ 
 }
 
 .nav-links a {
+  margin-top: -2%;
   text-decoration: none;
-  color: #333;
   font-weight: 500;
+
 }
 
 /* Carrito */
@@ -43,28 +48,170 @@
   justify-content: flex-end;
   text-decoration: none;
   color: #333;
-  font-weight: 500;
+  margin-top: -3%;
+  font-size: 100px;
 }
 
-h1.brand-title {
-  font-size: 1.5rem;
+.brand-title {
+  margin-top: 1%;
+  font-size: 90px;
   font-family: 'Playfair Display', serif;
   color: #d32f2f;
   text-transform: uppercase;
   margin-top: -1%;
   
 }
-.hero {
-  position: relative;
-  height: 500px;
-
-  background-image: url('/assets/otoño.png');
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 30px;
+.a:-webkit-any-link {
+  font-size: smaller;
 }
 
+/* Fondo detrás de la tarjeta */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 80px;
+  padding-right: 30px;
+  z-index: 1000;
+}
+
+/* Tarjeta del carrito */
+div.cart-modal {
+  position: relative;
+  width: 1000px;
+  min-height: 200px;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Título */
+.cart-modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Botón X */
+button.close-cart {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.close-cart:hover {
+  transform: scale(1.1);
+}
+
+
+/* Fondo de la ventana */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 80px;
+  padding-right: 30px;
+  z-index: 1000;
+}
+
+/* Tarjeta del carrito */
+.cart-modal {
+  position: relative;
+
+  width: 350px;
+  min-height: 200px;
+
+  background: white;
+
+  border-radius: 15px;
+
+  padding: 25px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Botón X */
+.close-cart {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Efecto al pasar el mouse */
+.close-cart:hover {
+  transform: scale(1.1);
+}
+
+/* Título */
+.cart-modal h2 {
+  margin-top: 0;
+}
+
+.cart-item {
+
+display: flex;
+align-items: center;
+gap: 15px;
+width: 500px;
+height: 500px;
+padding: 12px 0;
+
+}
+
+.cart-item img {
+  width: 500px;
+  height: 500px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 50px;
+}
+
+.cart-item-info p {
+  margin: 4px 0;
+  font-size: 50px;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 25px 0;
+   font-size: 50px;
+}
+
+button {
+border-width: 2px;
+border-style:  none;
+border: none;
+background-color: white;
+font-size:50px;
+margin-left: 50%;
+}

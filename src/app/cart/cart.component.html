@@ -1,0 +1,73 @@
+
+<div class="cart-container">
+
+  <h2>Mi carrito</h2>
+
+  <!-- Carrito vacío -->
+  <div *ngIf="cart.items.length === 0">
+
+    <p>
+      Tu carrito está vacío.
+    </p>
+
+  </div>
+
+
+  <!-- Productos -->
+  <div
+    class="cart-item"
+    *ngFor="let item of cart.items"
+  >
+
+    <img
+      [src]="item.productId.imageUrl"
+      [alt]="item.productId.name"
+    >
+
+    <div class="cart-info">
+
+      <h3>
+        {{ item.productId.name }}
+      </h3>
+
+      <p>
+        Precio:
+        ${{ item.productId.price }}
+      </p>
+
+      <p>
+        Cantidad:
+        {{ item.quantity }}
+      </p>
+
+      <p>
+        Subtotal:
+        ${{ item.productId.price * item.quantity }}
+      </p>
+
+      <button class="button1"
+        type="button"
+        (click)="eliminar(item.productId._id)"
+      >
+       x
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Total -->
+  <div
+    class="cart-total"
+    *ngIf="cart.items.length > 0"
+  >
+
+    <h3>
+      Total: ${{ calcularTotal() }}
+    </h3>
+
+  </div>
+
+</div>
+

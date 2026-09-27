@@ -1,0 +1,73 @@
+
+.carousel-window {
+  position: relative; /* necesario para que los botones se posicionen dentro */
+  width: 100%;
+  max-width: 1000px;
+   height: 2000px;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 2%;
+}
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.1s ease;
+}
+img{
+  
+  width: 1000px;   /* igual que la ventana */
+  height: 1500px;
+}
+.product-card {
+  width: 1000px;   /* igual que la ventana */
+  height: 2000px;
+  flex-shrink: 0;
+  text-align: center}
+
+
+
+.Título{
+font-size: 15px;
+}
+
+.carousel-btn {
+  position: absolute;
+  transform: translateY(-50%);
+   margin-top:-30% ;
+  
+}
+
+.carousel-btn.prev {
+  left: 1500px;
+   width: 200px;
+   height: 200px;
+    font-size: 100px; 
+   
+}
+.carousel-btn.next {
+  right: 1500px;
+   width: 200px;
+   height: 200px;
+   
+}
+
+.mat-mdc-fab.mat-accent{
+--mdc-fab-container-color: #c4acb4;
+}
+.carousel-btn.next img {
+  width: 80px;   /* ancho mayor */
+  height: 80px;  /* alto mayor */
+}
+
+.next-btn svg {
+  width: 40px;   /* ancho mayor */
+  height: 40px;  /* alto mayor */
+  fill: white;   /* color de la flecha */
+  
+}
+.carousel-btn mat-icon {
+  font-size: 60px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+}

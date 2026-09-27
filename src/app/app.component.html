@@ -1,50 +1,117 @@
+
 <header class="brand-header">
 
   <!-- Título -->
   <div class="brand">
-    <h1 class="brand-title">Tienda de Ropa</h1>
+    <h1 class="brand-title" routerLink="/home">
+      Tienda de Ropa
+    </h1>
   </div>
 
   <!-- Navegación central -->
-  <nav class="nav-links">
-    <a routerLink="/home">Inicio</a>
-    <a routerLink="/productlist">Productos</a>
-    <a routerLink="/login">Iniciar sesión</a>
+  <nav class="category-menu">
+
+    <a routerLink="/productos/mujer">
+      Mujer
+    </a>
+
+    <a routerLink="/productos/hombre">
+      Hombre
+    </a>
+
+    <a routerLink="/productos/ninos">
+      Niños
+    </a>
+
   </nav>
 
   <!-- Carrito -->
-  <a class="cart" routerLink="/cart">
-    🛒 Carrito
-  </a>
+  <div class="cart" (click)="toggleCart()">
+    🛒
+  </div>
 
 </header>
 
 
- 
+<!-- MODAL DEL CARRITO -->
+<div
+  class="cart-overlay"
+  *ngIf="showCart"
+  (click)="closeCart()"
+>
 
-<!-- Banner principal -->
-<section class="hero">
- <form class="search-box" (ngSubmit)="buscar()">
+  <div
+    class="cart-modal"
+    (click)="$event.stopPropagation()"
+  >
 
-    <input
-      type="text"
-      [(ngModel)]="textoBusqueda"
-      name="buscar"
-      placeholder="¿Qué estás buscando?"
+    <!-- Botón cerrar -->
+    <button
+      class="close-cart"
+      (click)="closeCart()"
     >
-
-    <button type="submit">
-      🔍
+      ✕
     </button>
 
-  </form>
-
-</section>
+    <h2>Mi carrito</h2>
 
 
+    <!-- PRODUCTOS -->
+    <div
+      class="cart-item"
+      *ngFor="let item of cartProducts"
+    >
+
+      <!-- Imagen -->
+      <img
+        *ngIf="item.product"
+        [src]="item.product.imageUrl"
+        [alt]="item.product.name"
+      >
+
+      <!-- Información -->
+      <div class="cart-item-info">
+
+        <h3 *ngIf="item.product">
+          {{ item.product.name }}
+        </h3>
+
+        <p *ngIf="item.product">
+          ${{ item.product.price }}
+        </p>
+
+        <p>
+          Cantidad: {{ item.quantity }}
+        </p>
+
+      </div>
 
 
+      <!-- Eliminar producto -->
+      <button
+        class="remove-item"
+        *ngIf="item.product"
+        (click)="removeFromCart(item.product._id)"
+      >
+        ✕
+      </button>
+
+    </div>
 
 
+    <!-- CARRITO VACÍO -->
+    <div
+      *ngIf="cartProducts.length === 0"
+      class="empty-cart"
+    >
+      <p>Tu carrito está vacío 🛒</p>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- Las demás páginas de Angular -->
 <router-outlet></router-outlet>
 

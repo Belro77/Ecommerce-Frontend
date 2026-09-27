@@ -1,0 +1,26 @@
+<div class="carousel-window" #carouselWindow>
+  <div 
+    class="carousel-track" 
+    [style.transform]="transformStyle"
+    [style.transition]="'transform 0.3s ease'">
+    
+    <div class="product-card" *ngFor="let producto of productosCarrusel">
+      <img [src]="producto.imageUrl" [alt]="producto.name">
+      
+    </div>
+  </div>
+</div>
+<!-- Botón anterior -->
+<button mat-fab color="accent" class="carousel-btn prev" (click)="prevSlide()">
+  <mat-icon>chevron_left</mat-icon>
+</button>
+
+<!-- Botón siguiente -->
+<button mat-fab color="accent" class="carousel-btn next" (click)="nextSlide()">
+  <mat-icon>chevron_right</mat-icon>
+</button>
+
+
+<br>
+<br>
+

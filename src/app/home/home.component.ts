@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../product.service';
+import { ProductService } from '../core/services/product.service';
 import { Product } from '../models/product.model';
 
 @Component({
@@ -8,6 +8,12 @@ import { Product } from '../models/product.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent  {
+textoBusqueda = '';
+
+
+buscar() {
+  console.log(this.textoBusqueda);
+}
 
  
 }
