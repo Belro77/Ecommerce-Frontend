@@ -1,6 +1,6 @@
 .carousel-window {
-  width: 90%;
-  max-width: 1200px;
+  width: 20%;
+  max-width: 200px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -11,7 +11,7 @@
 }
 
 .product-card {
-  min-width: 100%;
+  min-width: 80%;
 }
 
 .product-card img {
