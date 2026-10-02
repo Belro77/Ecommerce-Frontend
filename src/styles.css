@@ -1,0 +1,104 @@
+/* =========================
+   RESET BÁSICO
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background: #fff;
+  color: #222;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   CONTENEDOR GENERAL
+   ========================= */
+
+.container {
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
+}
+
+/* =========================
+   ELEMENTOS RESPONSIVE
+   ========================= */
+
+.responsive {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Evita que textos o elementos
+   demasiado largos rompan el diseño */
+
+h1,
+h2,
+h3,
+h4,
+p {
+  overflow-wrap: break-word;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 24px, 100%);
+  }
+}
+
+/* =========================
+   MÓVIL
+   ========================= */
+
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    width: calc(100% - 20px);
+  }
+}
