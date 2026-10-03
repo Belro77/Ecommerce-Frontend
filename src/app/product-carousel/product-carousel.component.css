@@ -34,13 +34,13 @@ font-size: 15px;
   position: absolute;
   transform: translateY(-50%);
    margin-top:-20% ;
- margin-left: 1050px;
+
 }
 
 .carousel-btn.prev {
  margin-left: 450px;
-   width: 100px;
-   height: 100px;
+   width: 6rem;
+   height: 6rem;
     font-size: 100px; 
    
 }
